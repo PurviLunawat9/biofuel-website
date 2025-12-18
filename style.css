@@ -19,6 +19,7 @@ img {
 .navbar {
   position: sticky; top: 0; background: white; z-index:1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  --nav-height: 70px;
 }
 .nav-flex { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
 .logo { font-size: 24px; font-weight: bold; color: #1b5e20; }
@@ -40,7 +41,7 @@ img {
     flex-direction: column;
     text-align: center;
     display: none;
-    padding: 20px 0;
+    padding: 40px 0;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   }
 
@@ -56,7 +57,7 @@ img {
 
 /* HERO */
 .hero {
-   min-height: 90vh;
+min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,7 +69,6 @@ img {
   url("https://images.unsplash.com/photo-1581091215367-59ab6b16d90d");
   background-size: cover;
   background-position: center;
-  padding: 140px 20px;
 }
 
 .hero h1 {
@@ -139,6 +139,21 @@ img {
   .about-box {
     margin-top: 20px;
   }
+
+  .hero {
+min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50vw 20px;
+  background: linear-gradient(
+    rgba(15, 61, 37, 0.85),
+    rgba(15, 61, 37, 0.85)
+  ),
+  url("https://images.unsplash.com/photo-1581091215367-59ab6b16d90d");
+  background-size: cover;
+  background-position: center;
+}
 }
 
 
